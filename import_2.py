@@ -28,7 +28,8 @@ try:
                 # Write the Python script containing the JSON data
                 with open(python_script_file, 'w') as script_file:
                     #print(json.dumps(data, indent=2))
-                    script_file.write(json.dumps(data, indent=2))
+                    intermediate = json.dumps(data)
+                    script_file.write(intermediate[1:-1])
 
                 print(f"Python script '{python_script_file}' generated successfully.")
                 i = i+ 1
