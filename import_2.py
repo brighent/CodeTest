@@ -23,11 +23,11 @@ try:
                 #print("Parsed JSON:", data)
                 #run_snyk_test(data)
                 # Specify the output Python script file
-                python_script_file = str(i)+'_script.py'
+                python_script_file = str(i)+'_script.pyc'
 
                 # Write the Python script containing the JSON data
                 with open(python_script_file, 'w') as script_file:
-                    script_file.write(f'data = {json.dumps(data, indent=2)}\n')
+                    script_file.write(f'json.dumps(data, indent=2)\n')
 
                 print(f"Python script '{python_script_file}' generated successfully.")
                 i = i+ 1
