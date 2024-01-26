@@ -13,7 +13,7 @@ do
         filename_noext="${filename%.*}"
 
         # Execute your command for each file and save output to a text file
-        snyk code test "$file" > "${filename_noext}_output.txt"
+        snyk code test "$filename" > "${filename_noext}_output.txt"
 
         # Optionally, display a message indicating completion for each file
         echo "Processed $file. Output saved to ${filename_noext}_output.txt"
